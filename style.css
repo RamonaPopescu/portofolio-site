@@ -1,0 +1,1265 @@
+/* Reset */
+* {
+  /* Alternativ box model for everithing  */
+  box-sizing: border-box;
+
+  /* Reset margin and padding for all elements */
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: Poppins, "Josefin Sans", sans-serif;
+  color: rgba(38, 31, 34, 0.75);
+
+  /* Pentru că există position relative / absolute se evită astfel scroll-ul orizontal și destrăbălarea elementelor */
+  overflow-x: hidden;
+  width: 100%;
+}
+
+h1 {
+  font-size: 4rem;
+  color: rgb(38, 31, 34);
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: -1px;
+  line-height: 5.5rem;
+  margin: 1.77rem 0;
+}
+
+h2 {
+  font-size: 2.8rem;
+  color: rgb(38, 31, 34);
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 10rem;
+  margin-bottom: 1.7rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 200;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 7rem;
+}
+
+h3.color {
+  background: linear-gradient(to right, #fe572e, #ff4c80);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.project h3 {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+h4 {
+  font-size: 1.414rem;
+  color: rgb(38, 31, 34);
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 1.77rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  margin: 1.7rem 0;
+}
+
+p {
+  font-size: 1rem;
+  font-family: Poppins, sans-serif;
+  color: rgba(38, 31, 34, 0.75);
+}
+
+p.small {
+  font-size: 0.83rem;
+}
+
+.white {
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(38, 31, 34);
+  font-weight: 700;
+}
+
+a:hover {
+  color: rgba(38, 31, 34, 0.5);
+}
+
+/* Pink links */
+
+.pink {
+  color: #ff4c80;
+}
+
+.pink:hover {
+  color: rgba(255, 76, 128, 0.5);
+}
+
+/* pseudo-element to style the placeholder text */
+::placeholder {
+  font-style: italic;
+}
+
+/* Header - Nav Bar */
+
+#mainheader {
+  border-bottom: 1px solid rgba(38, 31, 34, 0.1);
+}
+
+.hamburger {
+  display: none;
+}
+
+.header {
+  width: 90%;
+  margin: auto;
+  padding: 1.5rem 0 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  gap: 1.7rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerabout {
+  display: flex;
+  gap: 1.7rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  gap: 7.1rem;
+  justify-content: space-between;
+}
+
+.social,
+.mail-phone {
+  display: flex;
+  gap: 1.7rem;
+  align-items: center;
+}
+
+/* HOME PAGE  */
+
+/* Hero Section */
+
+#hero {
+  width: 55%;
+  margin: auto;
+  text-align: center;
+}
+
+.container.small {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.btn {
+  font-family: Poppins, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  display: inline-block;
+}
+
+.flex-btn {
+  gap: 0.8rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradient {
+  background-image: linear-gradient(to right, #fe572e, #ff4c80);
+  margin-top: 5.33rem;
+  margin-bottom: 10rem;
+}
+
+.gradient:hover {
+  background-image: linear-gradient(to right, #ef745c, #34073d);
+  color: white;
+}
+
+.gradient img {
+  height: 1rem;
+}
+
+/* Clients Section HOME PAGE*/
+
+#clients {
+  background-color: rgb(243, 242, 241);
+  padding: 5.3rem;
+  text-align: center;
+}
+
+.client-logo {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+  margin-top: 3rem;
+}
+
+.client-logo img {
+  background: transparent;
+}
+
+/* Tooltip */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip content */
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: rgba(254, 87, 46, 0.7);
+  color: #f3f2f1;
+  font-size: 0.7rem;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -75px;
+}
+
+/* Hover behavior */
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* My Work */
+
+.work {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+
+.front-end {
+  background-color: #43cb83;
+}
+
+.bootstrap {
+  background-color: #f08084;
+}
+
+.wordpress {
+  background-color: #7f63f4;
+  z-index: -10;
+  margin-top: 7rem;
+  padding-bottom: 15rem;
+}
+
+.two-cards {
+  margin: 10rem 0;
+}
+
+.cards {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  position: relative;
+  top: 5rem;
+}
+
+.modrian,
+.theatre {
+  flex-basis: 100%;
+}
+
+.img-theatre,
+.img-modrian,
+.img-bootstrap {
+  max-width: 100%;
+}
+
+.one-card-content {
+  position: relative;
+  top: 5rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.one-card-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.projects-previews {
+  position: relative;
+  width: 100%;
+}
+
+.in_sandale_pg {
+  max-width: 100%;
+  left: 10%;
+  top: 5%;
+}
+
+.ab_home {
+  max-width: 100%;
+  position: absolute;
+  left: 40%;
+  top: 27%;
+  z-index: 2;
+}
+
+.ab_footer {
+  max-width: 100%;
+  position: absolute;
+  right: 48%;
+  top: 75%;
+}
+
+.în_sandale_hp {
+  max-width: 100%;
+  position: absolute;
+  right: 2%;
+  top: 90%;
+  z-index: 3;
+}
+
+/* Buttons  */
+
+.black {
+  background-color: rgb(38, 31, 34);
+  font-weight: 500;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.red {
+  background-color: #f3f2f1;
+  font-weight: 500;
+  color: rgba(38, 31, 34, 0.75);
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.red:hover {
+  background-color: rgba(243, 242, 241, 0.5);
+  color: rgba(38, 31, 34, 0.9);
+}
+
+.black:hover {
+  background-color: rgba(38, 31, 34, 0.5);
+  color: white;
+}
+
+/* Testimonials Home */
+
+#testimonials {
+  margin-top: 14rem;
+}
+
+.declaration {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.client-testimonial {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 200;
+  margin-bottom: 3rem;
+}
+
+.client-name {
+  font-size: 0.8rem;
+}
+
+/* "Contact for freelance work" div */
+
+.contact {
+  width: 80%;
+  margin: auto;
+  margin-top: 17rem;
+}
+
+.contact.about {
+  margin-top: 2rem;
+}
+
+.contact p {
+  margin-bottom: 1.7rem;
+}
+
+.contact.contact-page {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+/* Footer */
+
+footer {
+  border-top: 1px solid rgba(38, 31, 34, 0.1);
+  padding: 1.7rem 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-links,
+.question {
+  display: flex;
+  gap: 1.7rem;
+  align-items: center;
+  font-weight: 700;
+}
+
+/* About Me PAGE */
+
+.hero-about {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 7rem;
+}
+
+.hero-about > p {
+  margin-bottom: 0.8rem;
+}
+
+/* Gallery About Me PAGE */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.7rem;
+}
+
+.gallery img {
+  max-width: 100%;
+}
+
+/* Benefits About Me PAGE */
+
+.benefits {
+  width: 80%;
+  margin: auto;
+}
+
+.benefits-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5.3rem;
+  margin-top: 5.33rem;
+}
+
+/* Testimonials About Me PAGE */
+
+#testimonials-about {
+  background-color: #f3f2f1;
+  margin-top: 8rem;
+}
+
+.clients-about {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 4rem 3rem;
+}
+
+.client-card {
+  background-color: white;
+  text-align: center;
+  padding: 3.5rem 2rem;
+}
+
+#deliverables {
+  width: 80%;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+.deliverables-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5.3rem;
+}
+
+/* Toogle */
+
+.toogle {
+  width: 40%;
+  margin: auto;
+  margin-top: 8rem;
+  background-color: #f3f2f1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 50px;
+}
+
+.dark {
+  color: white;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  background-color: black;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.light {
+  text-align: center;
+  padding: 1rem 1.5rem;
+}
+
+/* Tools */
+
+.tools-list {
+  width: 80%;
+  margin: auto;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+
+  /* flex-grow : 1; ➜ div-ul de mărește promorțional cu marimea ferestrei   
+flex-shrink : 1;  ➜ div-ul de micește promorțional cu marimea ferestrei 
+flex-basis : 0;   ➜ spațiul este împărțit în mod egal între div-uri  */
+}
+
+.tools-list div {
+  background-color: #f3f2f1;
+  border-radius: 8px;
+  display: flex;
+  flex: 1;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 8.7rem;
+}
+
+.tools-list div:hover {
+  cursor: pointer;
+  background-color: rgba(243, 242, 241, 0.4);
+}
+
+.tools-list img {
+  max-width: 100%;
+}
+
+.contact.about {
+  margin-top: 10rem;
+}
+
+/* Contact PAGE */
+
+.mail-phone.freelance-offer {
+  width: 60%;
+}
+
+.freelance-offer > .mail {
+  margin-top: 2rem;
+  background-color: #ff4c80;
+  border-radius: 8px;
+  padding: 1.2rem;
+  flex: 1;
+  text-align: center;
+}
+
+.freelance-offer > .mail:hover {
+  background-color: rgba(255, 76, 128, 0.5);
+}
+
+.freelance-offer > .phone {
+  margin-top: 2rem;
+  background-color: #f3f2f1;
+  border-radius: 8px;
+  padding: 1.2rem;
+  text-align: center;
+  flex: 1;
+}
+
+/* Q&A */
+
+#qa {
+  background-color: #f3f2f1;
+  padding: 1rem;
+}
+
+.qa-content {
+  width: 33%;
+  margin-left: 12rem;
+}
+
+.qa-question {
+  border-bottom: 1px solid rgba(38, 31, 34, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.question.text {
+  margin: 1.5rem 0;
+  color: rgba(38, 31, 34, 0.5);
+}
+
+.qa-content > h3 {
+  margin-bottom: 4rem;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+summary:after {
+  content: url(./Assets/img/plus_2.png);
+}
+
+details[open] summary:after {
+  content: url(./Assets//img/minus2.png);
+}
+
+details[open] div {
+  padding: 0.5rem 1rem;
+}
+
+details[open] .bold.text {
+  color: black;
+}
+
+/* Contact Form */
+
+.contact-form {
+  width: 80%;
+  margin: auto;
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.cta-contact-form p {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.cta-contact-form > h2 {
+  margin-top: 2rem;
+}
+
+/* Actual Form */
+
+.name-email,
+.budget-time {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+form input,
+form textarea {
+  font-family: Poppins, sans-serif;
+  color: rgba(38, 31, 34, 0.75);
+  font-size: 0.8rem;
+  background-color: #f3f2f1;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+  background-color: rgba(38, 31, 34, 0.1);
+}
+
+form div {
+  margin-bottom: 1.2rem;
+}
+
+form .btn {
+  margin-top: 0.1rem;
+  width: 100%;
+}
+
+/* Responsive 600 - 1200px*/
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  h1 {
+    font-style: italic;
+  }
+
+  h2 {
+    margin-top: 7rem;
+  }
+
+  .project h3 {
+    color: white;
+    width: 90%;
+  }
+
+  .btn {
+    margin-bottom: 6rem;
+  }
+
+  /* Header */
+
+  header .mail-phone {
+    display: none;
+  }
+
+  /* Hero */
+
+  #hero {
+    width: 90%;
+  }
+
+  /* My Work */
+
+  .work {
+    width: 80%;
+  }
+
+  .bootstrap {
+    background-color: #34313c;
+  }
+
+  .wordpress {
+    background-color: #b5e3db;
+  }
+
+  .front-end {
+    margin-top: 8rem;
+    background-color: #e38a0e;
+  }
+
+  .cards {
+    flex-direction: column;
+    top: 3rem;
+  }
+
+  .one-card-content {
+    width: 90%;
+    top: 2rem;
+  }
+
+  .black,
+  .red {
+    margin: 2rem 0;
+  }
+
+  .in_sandale_pg {
+    left: 10%;
+    top: 5%;
+  }
+
+  .ab_home {
+    left: 30%;
+    top: 40%;
+  }
+
+  .ab_footer {
+    right: 40%;
+    top: 95%;
+  }
+
+  .în_sandale_hp {
+    right: 2%;
+    top: 120%;
+    z-index: 3;
+  }
+
+  /* Testimonials */
+
+  #testimonials {
+    margin-top: 10rem;
+  }
+
+  .declaration {
+    width: 80%;
+  }
+
+  .contact {
+    margin-top: 15rem;
+  }
+
+  /* Footer */
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  footer .social {
+    order: -2;
+  }
+
+  footer .footer-links {
+    order: -1;
+  }
+
+  /* II. About Me PAGE*/
+
+  .hero-about {
+    width: 90%;
+  }
+
+  /* gallery */
+
+  .gallery {
+    gap: 1rem;
+  }
+
+  .gallery img {
+    height: 100%;
+    aspect-ratio: 1; /* will make width equal to height */
+    object-fit: cover;
+  }
+
+  /* What you get */
+
+  .benefits {
+    width: 70%;
+    margin: auto;
+  }
+
+  .benefits-cards {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  /* Testimonials About */
+
+  .clients-about {
+    grid-template-columns: 1fr;
+  }
+
+  /* Deliverables */
+
+  .deliverables-cards {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  #deliverables {
+    width: 70%;
+  }
+
+  /* Toogle */
+
+  .toogle {
+    width: 70%;
+  }
+
+  .dark,
+  .light {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  /* Tools */
+
+  .tools-list {
+    width: 50%;
+    gap: 1rem;
+  }
+
+  .tools-list div {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    height: 80px;
+    flex-basis: auto;
+    padding: 1rem;
+  }
+
+  .toolname {
+    font-weight: 700;
+  }
+
+  /* Q&A */
+
+  .qa-content {
+    width: 80%;
+    margin: auto;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+    gap: 8rem;
+  }
+}
+
+/* Responsive Phone Range: < 625px */
+
+@media (max-width: 625px) {
+  .left {
+    display: none;
+  }
+
+  .headerabout {
+    display: none;
+  }
+
+  .header {
+    padding: 0.6rem;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .mobile-menu > summary {
+    display: flex;
+    justify-content: end;
+    padding-top: 1rem;
+  }
+
+  .mobile-menu > summary:after {
+    content: url(./Assets/svg/menu1.svg);
+  }
+
+  .hamburger > details[open] summary:after {
+    content: url(./Assets/svg/x-thin.svg);
+  }
+
+  .hamburger > details[open] div {
+    padding: 0.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 2.441rem;
+    font-style: italic;
+    line-height: 4rem;
+  }
+
+  h2 {
+    font-size: 1.953rem;
+    margin-top: 5rem;
+  }
+
+  h3 {
+    font-size: 1.563rem;
+    margin-top: 4rem;
+  }
+
+  #projects h3 {
+    color: white;
+    width: 90%;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 0.83rem;
+  }
+
+  .btn {
+    width: 90%;
+    margin: auto;
+    margin: 4rem 0;
+  }
+
+  /* HOME PAGE */
+
+  /* Hero */
+
+  #hero {
+    width: 90%;
+  }
+
+  .container.small {
+    width: 90%;
+  }
+
+  /* My Work */
+
+  .work {
+    width: 80%;
+  }
+
+  .bootstrap {
+    background-color: #34313c;
+  }
+
+  .wordpress {
+    background-color: #95dfd3;
+  }
+
+  .front-end {
+    margin-top: 8rem;
+    background-color: #e38a0e;
+  }
+
+  .cards {
+    flex-direction: column;
+    top: 3rem;
+    width: 90%;
+  }
+
+  .one-card-content {
+    width: 90%;
+    top: 2rem;
+  }
+
+  .black,
+  .red {
+    margin: 3rem 0 2rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .in_sandale_pg {
+    left: 10%;
+    top: 5%;
+  }
+
+  .ab_home {
+    left: 30%;
+    top: 60%;
+  }
+
+  .ab_footer {
+    right: 40%;
+    top: 90%;
+  }
+
+  .în_sandale_hp {
+    right: 2%;
+    top: 140%;
+    z-index: 3;
+  }
+
+  /* Testimonials */
+
+  #testimonials {
+    margin-top: 8rem;
+  }
+
+  .declaration {
+    width: 90%;
+  }
+
+  .clients-about {
+    margin-top: 8rem;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem 2rem;
+  }
+
+  .client-testimonial {
+    font-size: 1.5rem;
+  }
+
+  .contact {
+    margin-top: 10rem;
+  }
+
+  /* Footer */
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  footer .social {
+    order: -2;
+  }
+
+  footer .footer-links {
+    order: -1;
+  }
+
+  /* II. About Me Page*/
+
+  .hero-about {
+    width: 85%;
+    margin-bottom: 4rem;
+  }
+
+  /* gallery */
+
+  .gallery {
+    gap: 1.2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: 100%;
+    aspect-ratio: 1/0.5;
+    object-fit: cover;
+  }
+
+  /* What you get */
+
+  .benefits {
+    width: 85%;
+    margin: auto;
+  }
+
+  .benefits-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* Testimonials About */
+
+  .clients-about {
+    grid-template-columns: 1fr;
+    padding: 3rem 1rem;
+    margin-top: 6rem;
+    gap: 2rem;
+  }
+
+  .client-card {
+    padding: 3rem 1.5rem;
+  }
+
+  /* Deliverables */
+
+  .deliverables-cards {
+    grid-template-columns: 1fr;
+  }
+
+  #deliverables {
+    width: 85%;
+    margin-top: 4rem;
+  }
+
+  /* Toogle */
+
+  .toogle {
+    width: 80%;
+    margin-top: 6rem;
+  }
+
+  .dark,
+  .light {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  /* Tools */
+
+  .tools-list {
+    width: 80%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .tools-list div {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .toolname {
+    font-weight: 700;
+  }
+
+  #workoffer {
+    margin-top: 8rem;
+  }
+
+  /* Contact PAGE */
+
+  .mail-phone.freelance-offer {
+    width: 100%;
+  }
+
+  .mail-phone {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .mail {
+    width: 100%;
+  }
+
+  .phone {
+    width: 100%;
+  }
+
+  .contact.page {
+    margin-bottom: 7rem;
+  }
+
+  /* Q&A */
+
+  .qa-content {
+    width: 85%;
+    margin: auto;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+    gap: 8rem;
+  }
+}
